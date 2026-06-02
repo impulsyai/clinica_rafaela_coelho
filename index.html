@@ -1,0 +1,1810 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Rafaela Coelho | Estética de Resultados em Fortaleza</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Clínica de estética de resultados em Fortaleza. Extensão de cílios, cabelo, unhas premium e protocolos corporais na Parquelândia. Agende seu #momentoRC.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="clínica estética Fortaleza, extensão de cílios Parquelândia, cabelo Fortaleza, estética corporal Ceará, unhas gel Fortaleza, Rafaela Coelho, RC Experience">
+    <meta name="geo.region" content="BR-CE">
+    <meta name="geo.placename" content="Fortaleza, Ceará">
+    <meta name="geo.position" content="-3.7389104;-38.5542763">
+    <link rel="canonical" href="https://clinica-rafaela-coelho.com.br">
+
+    <!-- Open Graph Metadata (WhatsApp/Instagram Share) -->
+    <meta property="og:title" content="Clínica Rafaela Coelho | Estética de Resultados em Fortaleza">
+    <meta property="og:description" content="Cabelo, cílios, unhas e estética de resultados na Parquelândia, Fortaleza. Protocolos exclusivos no seu #momentoRC.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://clinica-rafaela-coelho.com.br">
+    <meta property="og:image" content="assets/rafaela_profile.webp">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Schema.org Local Business (SEO Local) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BeautySalon",
+      "name": "Clínica Rafaela Coelho — Beleza e Estética",
+      "image": "assets/rafaela_profile.webp",
+      "url": "https://clinica-rafaela-coelho.com.br",
+      "telephone": "+55-85-96050605",
+      "priceRange": "$$",
+      "description": "Clínica de estética de resultados especializada em extensão de cílios, cabelo, unhas em gel e protocolos faciais e corporais em Fortaleza, Ceará.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Conselheiro Vieira da Silva, 621",
+        "addressLocality": "Fortaleza",
+        "addressRegion": "CE",
+        "postalCode": "60450-305",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -3.7389104,
+        "longitude": -38.5542763
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "18:00" }
+      ],
+      "sameAs": ["https://instagram.com/clinicarafaelacoelho"]
+    }
+    </script>
+
+    <!-- Preload Hero Background (Crítico para LCP) -->
+    <link rel="preload" as="image" href="assets/clinic_room.webp" fetchpriority="high">
+    
+    <!-- Favicon SVG (Data URI for sharp load) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='%233C2A21'/%3E%3Ctext y='65' x='20' font-family='serif' font-size='50' font-weight='bold' fill='%23E8DDD5'%3ERC%3C/text%3E%3C/svg%3E">
+
+    <!-- Load Client Config -->
+    <script src="config.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind JIT -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'var(--primary)',
+                        primaryDark: 'var(--primary-dark)',
+                        secondary: 'var(--secondary)',
+                        accent: 'var(--accent)',
+                        bg: 'var(--bg)',
+                        main: 'var(--text-main)',
+                        surface: 'var(--surface)',
+                        dark: '#1C1310',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                        '5xl': '4rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+    <!-- Base Styling & Transitions -->
+    <style>
+        :root {
+            --primary: #3C2A21;       /* Marrom Café */
+            --primary-dark: #20140F;  /* Café mais escuro */
+            --secondary: #b4aca3;     /* Identidade visual #b4aca3 */
+            --accent: #C5A059;        /* Dourado fosco */
+            --bg: #FCFAF7;            /* Off-white */
+            --text-main: #3C2A21;     /* Texto Marrom */
+            --surface: #b4aca3;       /* Identidade visual #b4aca3 */
+            --text-muted: rgba(60, 42, 33, 0.4);
+            --border-color: rgba(60, 42, 33, 0.08);
+        }
+
+        body.dark-mode {
+            --bg: #1C1310;            /* Deep Espresso/Café Profundo */
+            --text-main: #FCFAF7;     /* Off-white */
+            --primary: #FCFAF7;       /* Off-white */
+            --primary-dark: #0F0A08;  /* Quase preto terroso */
+            --secondary: #3C2A21;     /* Marrom médio */
+            --accent: #E6C17A;        /* Dourado brilhante */
+            --surface: #2B1E19;       /* Bege escuro/taupe */
+            --text-muted: rgba(252, 250, 247, 0.4);
+            --border-color: rgba(252, 250, 247, 0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html, body { 
+            max-width: 100%; 
+            overflow-x: hidden; 
+            background: var(--bg); 
+            color: var(--text-main);
+            font-family: 'Outfit', sans-serif;
+            scroll-behavior: smooth;
+            transition: background 0.8s cubic-bezier(0.16, 1, 0.3, 1), color 0.5s ease;
+        }
+
+        /* 📄 Film Grain Texture */
+        .noise {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 9999; pointer-events: none; opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* 🌫️ Glass Header */
+        .glass-header { 
+            background: rgba(180, 172, 163, 0.9); 
+            backdrop-filter: blur(20px); 
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        body.dark-mode .glass-header {
+            background: rgba(28, 19, 16, 0.85);
+        }
+        
+        /* 📏 Slim Navbar on Scroll */
+        nav.nav-slim {
+            padding-top: 0.5rem !important;
+            padding-bottom: 0.5rem !important;
+            box-shadow: 0 10px 30px rgba(28,19,16,0.03);
+        }
+
+        .tab-btn {
+            background: transparent !important;
+            border-color: transparent !important;
+            color: var(--text-main);
+            opacity: 0.45;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .tab-btn.active {
+            opacity: 1;
+            color: var(--accent) !important;
+        }
+        
+        .mask-wrap { overflow: hidden; display: block; }
+        .mask-text { display: block; transform: translateY(110%); transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
+        .active .mask-text { transform: translateY(0); }
+
+        /* ✨ Shine Effect Animation */
+        .btn-shine {
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-shine::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 20%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(30deg);
+            animation: shine 4s infinite;
+        }
+        @keyframes shine {
+            0% { left: -60%; }
+            15% { left: 120%; }
+            100% { left: 120%; }
+        }
+
+        /* 🎬 Cinematic 3D Coverflow Styles */
+        .carousel-section { perspective: 1200px; overflow: hidden; padding: 40px 0; }
+        .carousel-track { display: flex; align-items: center; justify-content: center; height: 580px; position: relative; transform-style: preserve-3d; }
+        .carousel-item { 
+            position: absolute; width: 400px; height: 550px; border-radius: 3.5rem; overflow: hidden; 
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer; 
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 40px;
+            box-shadow: 0 30px 60px -15px rgba(28, 19, 16, 0.3);
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+        }
+        .carousel-item h3 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 700; color: white; text-shadow: 0 2px 10px rgba(0,0,0,0.4); }
+        .carousel-item p { font-size: 14px; color: rgba(255,255,255,0.85); margin-top: 10px; font-weight: 500; }
+        
+        @media (max-width: 768px) {
+            .carousel-item { 
+                width: 250px; height: 370px; border-radius: 2rem; padding: 24px;
+            }
+            .carousel-track { height: 400px; }
+            .carousel-item h3 { font-size: 20px; }
+            .carousel-item p { font-size: 11px; }
+        }
+
+        .carousel-nav button { 
+            width: 50px; height: 50px; border-radius: 50%; border: 1px solid var(--border-color); 
+            background: var(--bg); color: var(--primary); display: flex; align-items: center; justify-content: center;
+            transition: all 0.3s; cursor: pointer;
+        }
+        .carousel-nav button:hover { background: var(--primary); color: var(--bg); transform: scale(1.05); }
+        
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        .image-zoom { overflow: hidden; }
+        .image-zoom img { transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
+        .image-zoom:hover img { transform: scale(1.06); }
+
+        /* 🏁 Editorial Marquee rotated */
+        .marquee-outer {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            z-index: 20;
+        }
+        .marquee-container {
+            background: var(--primary);
+            color: var(--bg);
+            padding: 16px 0;
+            white-space: nowrap;
+            transform: rotate(-0.6deg) scaleX(1.02);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            font-size: 11px;
+            box-shadow: 0 8px 25px rgba(28,19,16,0.06);
+        }
+        .marquee-content {
+            display: flex;
+            width: max-content;
+            animation: marquee-scroll 45s linear infinite;
+            will-change: transform;
+        }
+        @keyframes marquee-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-33.333%); }
+        }
+
+        /* 🌊 Parallax & Background Blobs */
+        .parallax-blob {
+            position: absolute; border-radius: 50%;
+            filter: blur(120px); opacity: 0.12; z-index: -1;
+            pointer-events: none;
+        }
+
+        .scroll-progress-wrap {
+            position: fixed; right: 25px; bottom: 25px;
+            height: 60px; width: 60px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%; z-index: 999;
+            background: var(--bg);
+            box-shadow: 0 15px 35px rgba(28,19,16,0.1);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            text-decoration: none;
+            border: 1px solid var(--border-color);
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(15px);
+        }
+        
+        .scroll-progress-wrap.active {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+
+        .scroll-progress-wrap svg path {
+            fill: none; stroke: var(--accent); stroke-width: 4;
+            stroke-dasharray: 307.919, 307.919;
+            stroke-dashoffset: 307.919;
+            transition: all 10ms linear;
+        }
+
+        /* 🌌 View Transition Morphing Styles */
+        .product-overlay {
+            position: fixed; inset: 0; z-index: 9999;
+            background: rgba(28, 19, 16, 0.65);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            display: none; align-items: center; justify-content: center;
+            opacity: 0; transition: opacity 0.4s ease; padding: 20px;
+        }
+        .product-overlay.open { display: flex; }
+        .product-overlay.visible { opacity: 1; }
+
+        .product-detail {
+            background: var(--bg); border-radius: 2.5rem;
+            max-width: 600px; width: 100%; overflow: hidden;
+            transform: scale(0.8) translateY(30px);
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), background 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 45px 90px rgba(28,19,16,0.3);
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+        
+        @media (max-width: 768px) {
+            .product-detail { 
+                border-radius: 2rem 2rem 0 0; position: fixed; bottom: 0; left: 0; right: 0; 
+                max-height: 80vh; overflow-y: auto; 
+                transform: translateY(100%); 
+                transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important; 
+            }
+            .product-overlay.visible .product-detail { transform: translateY(0); }
+        }
+        .product-overlay.visible .product-detail:not(@media (max-width:768px)) { transform: scale(1) translateY(0); }
+        
+        .detail-header {
+            width: 100%; height: 110px; background: linear-gradient(135deg, var(--primary), var(--primaryDark));
+            position: relative; overflow: hidden;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .detail-body { padding: 40px; }
+        .detail-body h2 { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: var(--primary); line-height: 1.25; margin-bottom: 15px; }
+        .detail-body p { font-size: 15px; color: var(--text-main); opacity: 0.8; line-height: 1.7; margin-bottom: 30px; font-weight: 400; }
+
+        /* ✨ Editorial List Styling */
+        .service-row {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .service-row:hover {
+            padding-left: 8px;
+        }
+        .price-tag {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* 🖼️ Cinematic Before/After Slider */
+        .compare-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4/5;
+            border-radius: 2rem;
+            overflow: hidden;
+            cursor: ew-resize;
+            border: 4px solid var(--surface);
+            box-shadow: 0 15px 35px rgba(28,19,16,0.06);
+            touch-action: pan-y;
+        }
+        .compare-layer { position: absolute; inset: 0; }
+        .compare-before { z-index: 2; clip-path: inset(0 50% 0 0); }
+        .compare-after { z-index: 1; }
+        .compare-img { width: 100%; height: 100%; object-fit: cover; }
+        .compare-divider {
+            position: absolute; top: 0; bottom: 0; left: 50%;
+            width: 2px; background: white; z-index: 3;
+            transform: translateX(-50%); pointer-events: none;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+        .compare-handle {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px; height: 40px; border-radius: 50%;
+            background: white; z-index: 4;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 15px rgba(28,19,16,0.25); pointer-events: none;
+            color: #3C2A21;
+        }
+
+        /* 🫧 Floating Bubbles/Particles Effect */
+        .hero-particles { position: absolute; inset: 0; z-index: 2; overflow: hidden; }
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.35);
+            border-radius: 50%;
+            opacity: 0;
+            animation: particleFloat 8s infinite;
+            pointer-events: none;
+        }
+        body.dark-mode .particle {
+            background: rgba(252, 250, 247, 0.25);
+        }
+        @keyframes particleFloat {
+            0% { opacity: 0; transform: translateY(110vh) scale(0); }
+            10% { opacity: 0.5; }
+            90% { opacity: 0.5; }
+            100% { opacity: 0; transform: translateY(-20vh) scale(1.2); }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="noise"></div>
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-[100] transition-all duration-500 py-3 px-6 lg:px-12 flex justify-between items-center glass-header" id="main-nav">
+        <div class="flex items-center">
+            <a href="#" class="block select-none pointer-events-auto">
+                <img src="assets/logo_transparent.webp" alt="Clínica Rafaela Coelho" class="h-12 w-auto object-contain transition-transform duration-300 hover:scale-[1.02]" id="nav-logo">
+            </a>
+        </div>
+        <div class="hidden lg:flex items-center gap-8 text-[10px] font-bold uppercase tracking-[0.18em] text-primary/80">
+            <a href="#" class="hover:text-accent transition-colors">Home</a>
+            <a href="#sobre" class="hover:text-accent transition-colors">A Clínica</a>
+            <a href="#destaques" class="hover:text-accent transition-colors">Pilares</a>
+            <a href="#procedimentos" class="hover:text-accent transition-colors">Procedimentos</a>
+            <a href="#transformacoes" class="hover:text-accent transition-colors">Resultados</a>
+            <button onclick="toggleDarkMode()" class="text-primary hover:text-accent transition-colors flex items-center justify-center p-2 min-w-[44px] min-h-[44px]" aria-label="Alternar modo escuro">
+                <span class="material-symbols-outlined text-lg">contrast</span>
+            </button>
+            <a href="https://wa.me/message/3WNUECODMQ4DG1" target="_blank" class="btn-shine bg-primary text-bg px-7 py-3 rounded-full hover:bg-opacity-90 shadow-md active:scale-95 transition-all text-center">Agendar #momentoRC</a>
+        </div>
+        <!-- Mobile Navigation Controls -->
+        <div class="flex lg:hidden items-center gap-4">
+            <button onclick="toggleDarkMode()" class="text-primary flex items-center justify-center p-2 min-w-[44px] min-h-[44px]" aria-label="Alternar modo escuro">
+                <span class="material-symbols-outlined text-2xl">contrast</span>
+            </button>
+            <button class="text-primary flex items-center justify-center p-2 min-w-[44px] min-h-[44px]" onclick="toggleMenu()" aria-label="Abrir menu de navegação">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU OVERLAY -->
+    <div id="mobile-menu" class="fixed inset-0 bg-primaryDark z-[200] flex flex-col items-center justify-center gap-8 text-bg transition-all duration-500 translate-x-full px-12">
+        <button onclick="toggleMenu()" class="absolute top-6 right-6 text-bg/60 hover:text-bg transition-colors flex items-center justify-center p-3 min-w-[44px] min-h-[44px]" aria-label="Fechar menu">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <img src="assets/logo_transparent.webp" alt="Clínica Rafaela Coelho" class="h-24 w-auto object-contain mb-6 select-none brightness-0 invert" id="menu-logo">
+        <div class="flex flex-col items-center gap-6">
+            <a href="#" onclick="toggleMenu()" class="text-xl font-serif text-bg hover:text-accent transition-colors">Home</a>
+            <a href="#sobre" onclick="toggleMenu()" class="text-xl font-serif text-bg hover:text-accent transition-colors">A Clínica</a>
+            <a href="#destaques" onclick="toggleMenu()" class="text-xl font-serif text-bg hover:text-accent transition-colors">Pilares</a>
+            <a href="#procedimentos" onclick="toggleMenu()" class="text-xl font-serif text-bg hover:text-accent transition-colors">Procedimentos</a>
+            <a href="#transformacoes" onclick="toggleMenu()" class="text-xl font-serif text-bg hover:text-accent transition-colors">Resultados</a>
+        </div>
+        <a href="https://wa.me/message/3WNUECODMQ4DG1" target="_blank" class="bg-accent text-primaryDark px-8 py-4 rounded-full font-bold text-xs uppercase tracking-widest mt-8 shadow-lg hover:brightness-110 transition-all text-center">Agendar #momentoRC</a>
+    </div>
+
+    <!-- HERO SECTION (CENTRALIZED EDITORIAL LAYOUT) -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-6 lg:px-12 bg-bg overflow-hidden text-center">
+        <!-- Full-bleed background image with dark overlay and bottom fade -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/clinic_room.webp" alt="Clínica Rafaela Coelho" id="hero-bg-img" class="w-full h-[120%] absolute -top-[10%] left-0 object-cover origin-center">
+            <!-- Overlay with multiplier effect to contrast white text -->
+            <div class="absolute inset-0 bg-black/55 dark:bg-black/70 mix-blend-multiply"></div>
+            <!-- Bottom smooth fade-out to page background color -->
+            <div class="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-bg to-transparent transition-all duration-800"></div>
+        </div>
+
+        <!-- Floating Particles/Bubbles Container -->
+        <div class="hero-particles" id="heroParticles"></div>
+        
+        <div class="container mx-auto max-w-4xl relative z-10 text-white flex flex-col items-center">
+            <span class="reveal-up inline-block px-5 py-2 rounded-full bg-white/10 text-white text-[10px] font-extrabold uppercase tracking-[0.25em] mb-8 border border-white/20">
+                ✦ FORTALEZA · ESTÉTICA DE RESULTADOS
+            </span>
+            <h1 class="reveal-up font-serif text-4xl sm:text-6xl md:text-7xl leading-[1.15] mb-6 select-none">
+                <span class="mask-wrap"><span class="mask-text block text-white">Clínica Rafaela Coelho</span></span>
+                <span class="mask-wrap"><span class="mask-text block italic font-normal text-accent mt-2">Estética de Resultados</span></span>
+            </h1>
+            <p class="reveal-up text-sm sm:text-base text-white/80 mb-10 max-w-lg leading-relaxed font-light">
+                Cabelo que vira capa. Cílios que transformam o olhar. Unhas que falam por si. Bem-vinda ao seu <strong class="text-accent">#momentoRC</strong> — onde sofisticação e resultado andam juntos na Parquelândia, Fortaleza.
+            </p>
+            <div class="reveal-up flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://wa.me/message/3WNUECODMQ4DG1" target="_blank" class="btn-shine bg-accent text-[#1C1310] px-8 py-4 rounded-full font-bold hover:opacity-90 transition-all shadow-lg flex items-center justify-center gap-2.5 cursor-pointer">
+                    Quero Meu #momentoRC <span class="material-symbols-outlined text-lg">calendar_month</span>
+                </a>
+                <a href="#transformacoes" class="bg-transparent text-white border border-white/40 hover:border-accent hover:text-accent px-8 py-4 rounded-full font-bold transition-all flex items-center justify-center gap-2">
+                    Ver Transformações <span class="material-symbols-outlined text-lg">auto_awesome</span>
+                </a>
+            </div>
+
+            <!-- Stats Centered Columns -->
+            <div class="reveal-up flex items-center justify-center gap-8 md:gap-16 mt-16 pt-10 border-t border-white/15 w-full max-w-lg">
+                <div class="text-center">
+                    <div class="font-serif text-2xl md:text-3xl font-bold text-white leading-none">8.3K+</div>
+                    <div class="text-[9px] uppercase tracking-widest text-white/50 mt-2 font-bold">Seguidores</div>
+                </div>
+                <div class="h-8 w-px bg-white/15"></div>
+                <div class="text-center">
+                    <div class="font-serif text-2xl md:text-3xl font-bold text-white leading-none">101</div>
+                    <div class="text-[9px] uppercase tracking-widest text-white/50 mt-2 font-bold">Publicações</div>
+                </div>
+                <div class="h-8 w-px bg-white/15"></div>
+                <div class="text-center">
+                    <div class="font-serif text-2xl md:text-3xl font-bold text-white leading-none">5★</div>
+                    <div class="text-[9px] uppercase tracking-widest text-white/50 mt-2 font-bold">Avaliações</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDITORIAL MARQUEE -->
+    <div class="marquee-outer">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <span class="inline-block px-8">CABELO • RC EXPERIENCE • CÍLIOS MARCANTES • ESTÉTICA DE RESULTADOS • BEM-ESTAR • UNHAS IMPECÁVEIS • #MOMENTORC •</span>
+                <span class="inline-block px-8">CABELO • RC EXPERIENCE • CÍLIOS MARCANTES • ESTÉTICA DE RESULTADOS • BEM-ESTAR • UNHAS IMPECÁVEIS • #MOMENTORC •</span>
+                <span class="inline-block px-8">CABELO • RC EXPERIENCE • CÍLIOS MARCANTES • ESTÉTICA DE RESULTADOS • BEM-ESTAR • UNHAS IMPECÁVEIS • #MOMENTORC •</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- PHILOSOPHY / A CLINICA -->
+    <section class="py-16 md:py-20 px-6 lg:px-12 bg-bg" id="sobre">
+        <div class="container mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="grid grid-cols-2 gap-4 relative">
+                    <div class="relative aspect-[3/4] rounded-[2.5rem] overflow-hidden mt-10 shadow-lg bg-surface">
+                        <img src="assets/clinic_room.webp" alt="Espaço Rafaela Coelho" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="relative aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-lg bg-surface">
+                        <img src="assets/clinic_detail.webp" alt="Atendimento Personalizado" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-bg rounded-full flex items-center justify-center shadow-xl z-10 border border-secondary transition-colors duration-800">
+                        <div class="font-serif text-2xl font-bold text-accent italic">RC</div>
+                    </div>
+                </div>
+
+                <div class="reveal-up lg:pl-6">
+                    <span class="text-accent font-bold uppercase tracking-[0.3em] text-[10px] block mb-4">A Filosofia RC</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl text-primary leading-tight mb-8">
+                        Onde o cuidado encontra a <br><span class="italic font-normal text-accent">sofisticação de resultados</span>
+                    </h2>
+                    <div class="space-y-6 text-gray-500 dark:text-gray-400 font-medium text-sm sm:text-base leading-relaxed mb-10">
+                        <p>Na Clínica Rafaela Coelho, cada procedimento é uma obra de arte pensada especificamente para você. Unimos a excelência técnica de nossa equipe a um ambiente acolhedor e tons neutros para proporcionar um momento de puro relaxamento e bem-estar.</p>
+                        <p>Aqui, sua essência é realçada com elegância e naturalidade. Não acreditamos em fórmulas prontas; cada pele, cada fio de cabelo e cada detalhe do olhar recebe um olhar individualizado de nossa equipe de especialistas na Parquelândia.</p>
+                    </div>
+                    <div class="grid grid-cols-3 gap-6 pt-6 border-t border-secondary transition-colors duration-800">
+                        <div>
+                            <h4 class="font-serif text-xl sm:text-2xl font-bold text-primary italic">Sofisticada</h4>
+                            <p class="text-[10px] text-gray-400 font-bold uppercase tracking-wider mt-1">Ambiente & Detalhes</p>
+                        </div>
+                        <div>
+                            <h4 class="font-serif text-xl sm:text-2xl font-bold text-primary italic">Acolhedora</h4>
+                            <p class="text-[10px] text-gray-400 font-bold uppercase tracking-wider mt-1">Sinta-se em Casa</p>
+                        </div>
+                        <div>
+                            <h4 class="font-serif text-xl sm:text-2xl font-bold text-primary italic">Personalizada</h4>
+                            <p class="text-[10px] text-gray-400 font-bold uppercase tracking-wider mt-1">Protocolos Únicos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PILARES / CARROSSEL 3D -->
+    <section class="py-16 bg-surface/30 transition-colors duration-800" id="destaques">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-10 md:mb-16 reveal-up">
+                <span class="text-accent font-bold uppercase tracking-[0.3em] text-[10px] block mb-3">Nossos Quatro Pilares</span>
+                <h2 class="font-serif text-3xl sm:text-5xl text-primary leading-tight">Os Carros-Chefe da Clínica</h2>
+            </div>
+
+            <!-- 3D Coverflow Container -->
+            <div class="carousel-section reveal-up">
+                <div class="carousel-track" id="carousel-track">
+                    <!-- Slide 1: Cabelo -->
+                    <div class="carousel-item bg-cover bg-center" style="background-image: linear-gradient(to top, rgba(60, 42, 33, 0.9), rgba(0,0,0,0.1)), url('assets/pillar_hair.webp')" onclick="scrollToCatalog('cabelo')">
+                        <div class="text-white">
+                            <span class="text-accent text-[9px] uppercase tracking-widest font-black block mb-2">RC Experience</span>
+                            <h3>Cabelo & Tratamento</h3>
+                            <p>Escova, coloração e cronograma capilar de elite.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 2: Cílios -->
+                    <div class="carousel-item bg-cover bg-center" style="background-image: linear-gradient(to top, rgba(60, 42, 33, 0.9), rgba(0,0,0,0.1)), url('assets/pillar_lashes.webp')" onclick="scrollToCatalog('cilios')">
+                        <div class="text-white">
+                            <span class="text-accent text-[9px] uppercase tracking-widest font-black block mb-2">Olhar Marcante</span>
+                            <h3>Extensão de Cílios</h3>
+                            <p>Técnicas de visagismo com durabilidade excepcional.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 3: Unhas -->
+                    <div class="carousel-item bg-cover bg-center" style="background-image: linear-gradient(to top, rgba(60, 42, 33, 0.9), rgba(0,0,0,0.1)), url('assets/pillar_nails.webp')" onclick="scrollToCatalog('unhas')">
+                        <div class="text-white">
+                            <span class="text-accent text-[9px] uppercase tracking-widest font-black block mb-2">Sofisticação</span>
+                            <h3>Unhas de Fibra & Gel</h3>
+                            <p>Alongamentos impecáveis, blindagem e manicure SPA.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 4: Estética -->
+                    <div class="carousel-item bg-cover bg-center" style="background-image: linear-gradient(to top, rgba(60, 42, 33, 0.9), rgba(0,0,0,0.1)), url('assets/pillar_aesthetics.webp')" onclick="scrollToCatalog('facial')">
+                        <div class="text-white">
+                            <span class="text-accent text-[9px] uppercase tracking-widest font-black block mb-2">Estética de Resultados</span>
+                            <h3>Estética Avançada</h3>
+                            <p>Protocolos faciais e corporais personalizados.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-nav flex justify-center gap-4 mt-8">
+                    <button onclick="rotateCarousel(-1)" class="shadow-sm"><span class="material-symbols-outlined">arrow_back</span></button>
+                    <button onclick="rotateCarousel(1)" class="shadow-sm"><span class="material-symbols-outlined">arrow_forward</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRANSFORMATIONS / ANTES E DEPOIS -->
+    <section class="py-16 md:py-20 px-6 lg:px-12 bg-bg" id="transformacoes">
+        <div class="container mx-auto">
+            <div class="text-center mb-16 reveal-up">
+                <span class="text-accent font-bold uppercase tracking-[0.3em] text-[10px] block mb-3">Estética de Resultados</span>
+                <h2 class="font-serif text-3xl sm:text-5xl text-primary leading-tight italic">
+                    Transformações de Impacto
+                </h2>
+                <p class="text-gray-400 text-[10px] uppercase font-bold tracking-[0.35em] mt-3">Arrastar a barra para revelar a mudança</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                <!-- Comparação 1: Extensão de Cílios -->
+                <div class="reveal-up bg-surface/20 rounded-[2.5rem] p-5 border border-secondary transition-colors duration-800">
+                    <h3 class="font-serif text-2xl font-bold text-primary mb-2 text-center">Extensão de Cílios</h3>
+                    <p class="text-[10px] font-bold text-accent uppercase tracking-widest text-center mb-5">Volume & Visagismo do Olhar</p>
+                    
+                    <div class="compare-container" onmousemove="updateWipe(event, this)" ontouchmove="updateWipe(event, this)">
+                        <div class="compare-layer compare-before">
+                            <img src="assets/lashes_before.webp" class="compare-img">
+                        </div>
+                        <div class="compare-layer compare-after">
+                            <img src="assets/lashes_after.webp" class="compare-img">
+                        </div>
+                        <div class="compare-divider"></div>
+                        <div class="compare-handle">
+                            <span class="material-symbols-outlined text-lg">unfold_more</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 text-xs mt-5 text-center leading-relaxed font-medium">Aplicação com mapeamento personalizado para abrir o olhar e harmonizar a face com naturalidade.</p>
+                </div>
+
+                <!-- Comparação 2: Alinhamento / Cor Capilar -->
+                <div class="reveal-up bg-surface/20 rounded-[2.5rem] p-5 border border-secondary transition-colors duration-800">
+                    <h3 class="font-serif text-2xl font-bold text-primary mb-2 text-center">RC Experience Capilar</h3>
+                    <p class="text-[10px] font-bold text-accent uppercase tracking-widest text-center mb-5">Brilho, Força e Alinhamento</p>
+                    
+                    <div class="compare-container" onmousemove="updateWipe(event, this)" ontouchmove="updateWipe(event, this)">
+                        <div class="compare-layer compare-before">
+                            <img src="assets/hair_before.webp" class="compare-img">
+                        </div>
+                        <div class="compare-layer compare-after">
+                            <img src="assets/hair_after.webp" class="compare-img">
+                        </div>
+                        <div class="compare-divider"></div>
+                        <div class="compare-handle">
+                            <span class="material-symbols-outlined text-lg">unfold_more</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 text-xs mt-5 text-center leading-relaxed font-medium">Recuperação total da fibra capilar com nossos tratamentos de cronograma capilar premium.</p>
+                </div>
+            </div>
+            
+            <!-- Expansible Cases Grid -->
+            <div id="expanded-cases" class="hidden grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto mt-10 pt-10 border-t border-secondary transition-all">
+                <!-- Case 1: Unhas em Gel -->
+                <div class="bg-surface/20 border border-secondary rounded-[2rem] p-4 transition-all hover:shadow-md">
+                    <div class="grid grid-cols-2 gap-2 rounded-2xl overflow-hidden aspect-[4/3] bg-surface">
+                        <div class="relative group">
+                            <span class="absolute top-2 left-2 z-10 bg-black/55 text-white text-[8px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Antes</span>
+                            <img src="assets/pillar_nails.webp" class="w-full h-full object-cover grayscale contrast-[1.05]">
+                        </div>
+                        <div class="relative group">
+                            <span class="absolute top-2 left-2 z-10 bg-accent text-[#1C1310] text-[8px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Depois</span>
+                            <img src="assets/pillar_nails.webp" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <h4 class="font-serif text-base text-primary font-bold italic mt-4 mb-1">Alongamento em Gel Premium</h4>
+                    <p class="text-xs text-gray-500 font-medium">Reconstrução e esmaltação permanente com acabamento vitrificado de luxo.</p>
+                </div>
+
+                <!-- Case 2: Estética Facial -->
+                <div class="bg-surface/20 border border-secondary rounded-[2rem] p-4 transition-all hover:shadow-md">
+                    <div class="grid grid-cols-2 gap-2 rounded-2xl overflow-hidden aspect-[4/3] bg-surface">
+                        <div class="relative group">
+                            <span class="absolute top-2 left-2 z-10 bg-black/55 text-white text-[8px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Antes</span>
+                            <img src="assets/clinic_detail.webp" class="w-full h-full object-cover grayscale contrast-[1.05]">
+                        </div>
+                        <div class="relative group">
+                            <span class="absolute top-2 left-2 z-10 bg-accent text-[#1C1310] text-[8px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Depois</span>
+                            <img src="assets/clinic_detail.webp" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <h4 class="font-serif text-base text-primary font-bold italic mt-4 mb-1">Limpeza de Pele Profunda</h4>
+                    <p class="text-xs text-gray-500 font-medium">Extração de impurezas com peeling de diamante para renovação celular.</p>
+                </div>
+
+                <!-- Case 3: Estética Corporal -->
+                <div class="bg-surface/20 border border-secondary rounded-[2rem] p-4 transition-all hover:shadow-md">
+                    <div class="grid grid-cols-2 gap-2 rounded-2xl overflow-hidden aspect-[4/3] bg-surface">
+                        <div class="relative group">
+                            <span class="absolute top-2 left-2 z-10 bg-black/55 text-white text-[8px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Antes</span>
+                            <img src="assets/pillar_aesthetics.webp" class="w-full h-full object-cover grayscale contrast-[1.05]">
+                        </div>
+                        <div class="relative group">
+                            <span class="absolute top-2 left-2 z-10 bg-accent text-[#1C1310] text-[8px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Depois</span>
+                            <img src="assets/pillar_aesthetics.webp" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <h4 class="font-serif text-base text-primary font-bold italic mt-4 mb-1">Drenagem Redutora Método RC</h4>
+                    <p class="text-xs text-gray-500 font-medium">Estética de resultados com redução de inchaço e contorno imediato.</p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12 reveal-up">
+                <button onclick="toggleCases(this)" class="inline-flex items-center gap-2 bg-primary text-bg px-8 py-4 rounded-full font-bold hover:bg-opacity-95 transition-all text-xs whitespace-nowrap shadow-md cursor-pointer">
+                    Ver Mais Casos <span class="material-symbols-outlined text-base">expand_more</span>
+                </button>
+                <a href="https://instagram.com/clinicarafaelacoelho" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-transparent border border-primary px-8 py-4 rounded-full text-primary font-bold hover:bg-primary hover:text-bg transition-all text-xs whitespace-nowrap shadow-sm">
+                    <i class="fab fa-instagram text-base"></i> Ver Resultados no Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY / SEU ESPAÇO DE TRANSFORMAÇÃO -->
+    <section class="py-16 md:py-20 px-6 lg:px-12 bg-bg" id="espaco">
+        <div class="container mx-auto">
+            <div class="text-center mb-16 reveal-up">
+                <span class="text-accent font-bold uppercase tracking-[0.3em] text-[10px] block mb-3">Conforto & Bem-Estar</span>
+                <h2 class="font-serif text-3xl sm:text-5xl text-primary leading-tight italic">
+                    Seu Espaço de Transformação
+                </h2>
+                <p class="text-gray-500 dark:text-gray-400 text-xs sm:text-sm max-w-md mx-auto mt-4 font-medium">
+                    Ambiente planejado para seu conforto, segurança e bem-estar.
+                </p>
+            </div>
+
+            <!-- Mosaic Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 auto-rows-[200px] md:auto-rows-[240px] max-w-5xl mx-auto reveal-up">
+                <!-- Card 1 (Left Vertical) -->
+                <div class="md:col-span-1 md:row-span-2 image-zoom rounded-[2rem] md:rounded-[2.5rem] shadow-md border border-secondary transition-colors duration-800">
+                    <img src="assets/gallery_1.webp" alt="Sala de atendimento Clínica Rafaela Coelho Parquelândia Fortaleza" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <!-- Card 2 (Middle Top) -->
+                <div class="col-span-1 row-span-1 image-zoom rounded-[2rem] md:rounded-[2.5rem] shadow-md border border-secondary transition-colors duration-800">
+                    <img src="assets/gallery_2.webp" alt="Ambiente de atendimento premium Clínica Rafaela Coelho" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <!-- Card 3 (Right Top) -->
+                <div class="col-span-1 row-span-1 image-zoom rounded-[2rem] md:rounded-[2.5rem] shadow-md border border-secondary transition-colors duration-800">
+                    <img src="assets/gallery_3.webp" alt="Sala da especialista Rafaela Coelho estética Fortaleza" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <!-- Card 4 (Middle Wide) -->
+                <div class="sm:col-span-2 md:col-span-2 row-span-1 image-zoom rounded-[2rem] md:rounded-[2.5rem] shadow-md border border-secondary transition-colors duration-800">
+                    <img src="assets/gallery_4.webp" alt="Atendimento humanizado Clínica Rafaela Coelho" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <!-- Card 5 (Left Bottom) -->
+                <div class="col-span-1 row-span-1 image-zoom rounded-[2rem] md:rounded-[2.5rem] shadow-md border border-secondary transition-colors duration-800">
+                    <img src="assets/gallery_5.webp" alt="Momentos RC estética de resultados Fortaleza" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <!-- Card 6 (Bottom Wide) -->
+                <div class="sm:col-span-2 md:col-span-2 row-span-1 image-zoom rounded-[2rem] md:rounded-[2.5rem] shadow-md border border-secondary transition-colors duration-800">
+                    <img src="assets/gallery_6.webp" alt="Experiência RC beleza e estética premium" class="w-full h-full object-cover" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Ver Mais no Instagram -->
+            <div class="mt-12 text-center reveal-up">
+                <a href="https://instagram.com/clinicarafaelacoelho" target="_blank" rel="noopener"
+                   class="inline-flex items-center gap-3 bg-transparent border border-primary text-primary px-8 py-4 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-primary hover:text-bg transition-all duration-300">
+                    <i class="fab fa-instagram text-lg"></i>
+                    Ver Mais no Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCEDIMENTOS (Dynamic searchable catalog) - STANDBY: desativado temporariamente, reativar removendo o comentário -->
+    <!--
+    <section class="py-24 md:py-32 px-6 lg:px-12 bg-bg" id="procedimentos">
+        <div class="container mx-auto">
+            <div class="bg-surface/30 rounded-[3rem] p-6 md:p-14 border border-secondary reveal-up mx-auto overflow-hidden transition-colors duration-800">
+                <div class="mb-10 text-center w-full mx-auto px-4">
+                    <span class="text-accent font-bold uppercase tracking-[0.3em] text-[10px] block mb-3">Nossos Procedimentos</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl text-primary leading-tight italic">
+                        Cardápio de Transformação
+                    </h2>
+                </div>
+
+                <div class="relative max-w-md mx-auto mb-10 reveal-up">
+                    <span class="absolute left-5 top-1/2 -translate-y-1/2 material-symbols-outlined text-primary/40 text-xl">search</span>
+                    <input type="text" id="procedure-search" placeholder="Procurar procedimento (ex: escova, volume...)" 
+                           class="w-full bg-bg border border-secondary text-primary rounded-2xl py-4 pl-14 pr-6 text-sm focus:outline-none focus:border-accent transition-all font-medium placeholder-primary/30"
+                           oninput="handleSearch(this.value)">
+                </div>
+
+                <div class="relative flex overflow-x-auto gap-2.5 mb-10 pb-4 no-scrollbar lg:justify-center border-b border-secondary transition-colors duration-800 px-4" id="tab-controls">
+                    <button class="tab-btn whitespace-nowrap px-6 py-3 text-[10px] font-bold uppercase tracking-[0.2em] transition-all cursor-pointer" onclick="showTab('cabelo', this)">Cabelo</button>
+                    <button class="tab-btn whitespace-nowrap px-6 py-3 text-[10px] font-bold uppercase tracking-[0.2em] transition-all cursor-pointer" onclick="showTab('cilios', this)">Cílios</button>
+                    <button class="tab-btn whitespace-nowrap px-6 py-3 text-[10px] font-bold uppercase tracking-[0.2em] transition-all cursor-pointer" onclick="showTab('unhas', this)">Unhas</button>
+                    <button class="tab-btn whitespace-nowrap px-6 py-3 text-[10px] font-bold uppercase tracking-[0.2em] transition-all cursor-pointer" onclick="showTab('facial', this)">Estética Facial</button>
+                    <button class="tab-btn whitespace-nowrap px-6 py-3 text-[10px] font-bold uppercase tracking-[0.2em] transition-all cursor-pointer" onclick="showTab('corporal', this)">Estética Corporal</button>
+                    <div id="tab-indicator" class="absolute bottom-0 left-0 h-[2px] bg-accent transition-all pointer-events-none" style="width: 0px;"></div>
+                </div>
+                
+                <div id="price-container" class="grid lg:grid-cols-2 lg:gap-x-16 min-h-[220px] content-start"></div>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!-- 💡 COMO FUNCIONA (MINI SEÇÃO) -->
+    <section class="py-16 bg-surface/10 transition-colors duration-800">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-serif text-3xl sm:text-4xl text-primary mb-3 italic reveal-up">Seu Caminho para a Renovação</h2>
+            <p class="text-gray-400 text-[10px] uppercase font-bold tracking-[0.3em] mb-16 reveal-up">Em três etapas pensadas para o seu conforto.</p>
+            
+            <div class="grid md:grid-cols-3 gap-12 max-w-4xl mx-auto relative">
+                <!-- Connecting line (Desktop) -->
+                <div class="hidden md:block absolute top-10 left-[15%] right-[15%] h-[1px] border-t border-dashed border-accent/30 -z-0"></div>
+
+                <div class="reveal-up relative z-10">
+                    <div class="w-16 h-16 rounded-full bg-bg border border-accent/20 flex items-center justify-center text-accent font-serif text-xl mx-auto mb-6 shadow-sm italic transition-all hover:scale-105">01</div>
+                    <h4 class="font-serif text-lg text-primary mb-3 italic">Escolha o serviço</h4>
+                    <p class="text-gray-500 dark:text-gray-400 text-xs leading-relaxed max-w-[220px] mx-auto font-medium">Navegue por nosso cardápio completo de cabelo, cílios, unhas e estética.</p>
+                </div>
+
+                <div class="reveal-up relative z-10">
+                    <div class="w-16 h-16 rounded-full bg-bg border border-accent/20 flex items-center justify-center text-accent font-serif text-xl mx-auto mb-6 shadow-sm italic">02</div>
+                    <h4 class="font-serif text-lg text-primary mb-3 italic">Agende pelo WhatsApp</h4>
+                    <p class="text-gray-500 dark:text-gray-400 text-xs leading-relaxed max-w-[220px] mx-auto font-medium">Clique no botão e seja atendida de forma ágil e atenciosa por nossa equipe.</p>
+                </div>
+
+                <div class="reveal-up relative z-10">
+                    <div class="w-16 h-16 rounded-full bg-bg border border-accent/20 flex items-center justify-center text-accent font-serif text-xl mx-auto mb-6 shadow-sm italic">03</div>
+                    <h4 class="font-serif text-lg text-primary mb-3 italic">Desfrute o Momento</h4>
+                    <p class="text-gray-500 dark:text-gray-400 text-xs leading-relaxed max-w-[220px] mx-auto font-medium">Compareça ao nosso studio e viva o seu verdadeiro #momentoRC.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM / A ESPECIALISTA -->
+    <section class="relative bg-primaryDark overflow-hidden" id="equipe">
+        <!-- Decorative background blobs -->
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="container mx-auto px-6 lg:px-12 relative z-10">
+            <div class="grid lg:grid-cols-2 min-h-[600px]">
+
+                <!-- LEFT: Large Photo Column -->
+                <div class="relative flex items-end justify-center pt-16 pb-0 lg:pb-0 reveal-up">
+                    <!-- Gold decorative ring -->
+                    <div class="absolute top-12 left-1/2 -translate-x-1/2 lg:left-16 lg:translate-x-0 w-[340px] h-[340px] lg:w-[420px] lg:h-[420px] rounded-full border border-accent/20 pointer-events-none"></div>
+                    <div class="absolute top-16 left-1/2 -translate-x-1/2 lg:left-20 lg:translate-x-0 w-[300px] h-[300px] lg:w-[370px] lg:h-[370px] rounded-full border border-accent/10 pointer-events-none"></div>
+
+                    <!-- Photo -->
+                    <div class="relative w-[300px] lg:w-[400px] z-10">
+                        <!-- Gold accent badge -->
+                        <div class="absolute -top-4 -right-4 w-20 h-20 bg-accent rounded-full flex items-center justify-center z-20 shadow-lg shadow-accent/30">
+                            <div class="text-center">
+                                <span class="block font-serif text-[10px] font-bold text-primaryDark italic leading-tight">RC</span>
+                                <span class="block font-serif text-[8px] text-primaryDark/70 italic">Expert</span>
+                            </div>
+                        </div>
+                        <img src="assets/rafaela_profile.webp" alt="Rafaela Coelho"
+                             class="w-full object-cover object-top rounded-t-[6rem] rounded-b-none shadow-2xl"
+                             style="aspect-ratio: 3/4;">
+                    </div>
+
+                    <!-- Floating quote card -->
+                    <div class="absolute bottom-8 left-4 lg:left-6 bg-bg/10 backdrop-blur-md border border-white/10 rounded-2xl p-4 max-w-[200px] z-20 hidden lg:block">
+                        <div class="flex gap-1 mb-2">
+                            <i class="fas fa-star text-accent text-[9px]"></i>
+                            <i class="fas fa-star text-accent text-[9px]"></i>
+                            <i class="fas fa-star text-accent text-[9px]"></i>
+                            <i class="fas fa-star text-accent text-[9px]"></i>
+                            <i class="fas fa-star text-accent text-[9px]"></i>
+                        </div>
+                        <p class="text-white/80 text-[10px] leading-relaxed font-medium italic">"Melhor clínica de Fortaleza. Atendimento impecável!"</p>
+                        <p class="text-accent text-[9px] font-bold uppercase tracking-wider mt-2">— Cliente RC</p>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Content Column -->
+                <div class="flex flex-col justify-center py-16 lg:pl-16 reveal-up">
+                    <span class="text-accent text-[10px] uppercase font-bold tracking-[0.4em] mb-6 block">A Especialista</span>
+
+                    <h2 class="font-serif text-5xl sm:text-6xl lg:text-7xl text-bg leading-none mb-3">
+                        Rafaela<br><span class="italic font-normal text-accent">Coelho</span>
+                    </h2>
+                    <p class="text-white/40 font-bold text-xs tracking-[0.3em] uppercase mb-10">Fundadora & Referência em Estética</p>
+
+                    <!-- Stats Row -->
+                    <div class="grid grid-cols-3 gap-4 mb-10 pb-10 border-b border-white/10">
+                        <div>
+                            <h4 class="font-serif text-3xl text-accent italic">8+</h4>
+                            <p class="text-white/50 text-[10px] uppercase font-bold tracking-wider mt-1">Anos de<br>Experiência</p>
+                        </div>
+                        <div>
+                            <h4 class="font-serif text-3xl text-accent italic">3k+</h4>
+                            <p class="text-white/50 text-[10px] uppercase font-bold tracking-wider mt-1">Clientes<br>Atendidas</p>
+                        </div>
+                        <div>
+                            <h4 class="font-serif text-3xl text-accent italic">5★</h4>
+                            <p class="text-white/50 text-[10px] uppercase font-bold tracking-wider mt-1">Avaliação<br>no Google</p>
+                        </div>
+                    </div>
+
+                    <!-- Bio -->
+                    <p class="text-white/60 font-medium text-sm leading-relaxed mb-6">
+                        Dedicada a elevar a autoestima e realçar a beleza natural de cada cliente, Rafaela Coelho comanda a clínica referência na Parquelândia — com um olhar técnico focado em <span class="text-accent font-bold">Estética de Resultados</span>.
+                    </p>
+
+                    <!-- Quote -->
+                    <blockquote class="border-l-2 border-accent pl-5 mb-10">
+                        <p class="font-serif text-base text-white/80 italic leading-relaxed">"Minha missão é criar um refúgio onde cada mulher saia confiante e sofisticada. O #momentoRC é sobre a experiência completa de ser bem cuidada."</p>
+                    </blockquote>
+
+                    <!-- Credentials -->
+                    <ul class="space-y-3 mb-10">
+                        <li class="flex items-center gap-3 text-white/60 text-xs font-bold uppercase tracking-wider">
+                            <span class="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                                <span class="material-symbols-outlined text-accent text-sm">verified</span>
+                            </span>
+                            Protocolos Corporais e Faciais Avançados
+                        </li>
+                        <li class="flex items-center gap-3 text-white/60 text-xs font-bold uppercase tracking-wider">
+                            <span class="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                                <span class="material-symbols-outlined text-accent text-sm">emoji_events</span>
+                            </span>
+                            Estética de Resultados sob Visagismo
+                        </li>
+                        <li class="flex items-center gap-3 text-white/60 text-xs font-bold uppercase tracking-wider">
+                            <span class="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                                <span class="material-symbols-outlined text-accent text-sm">spa</span>
+                            </span>
+                            Espaço Premium na Parquelândia, Fortaleza
+                        </li>
+                    </ul>
+
+                    <!-- CTA -->
+                    <a href="https://instagram.com/clinicarafaelacoelho" target="_blank"
+                       class="inline-flex items-center gap-2.5 text-primaryDark bg-accent hover:brightness-110 transition-all font-bold text-xs uppercase tracking-widest px-7 py-3.5 rounded-full self-start shadow-lg shadow-accent/20">
+                        <i class="fab fa-instagram text-base"></i> Siga @clinicarafaelacoelho
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- REVIEWS / PROVA SOCIAL -->
+    <section class="py-16 bg-surface/20 transition-colors duration-800" id="avaliacoes">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-serif text-3xl sm:text-4xl text-primary mb-4 italic reveal-up">Vozes do #momentoRC</h2>
+            <!-- Rating summary -->
+            <div class="flex items-center justify-center gap-3 mb-12 reveal-up">
+                <div class="flex gap-1 text-accent">
+                    <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
+                </div>
+                <span class="font-serif text-lg text-primary font-bold italic">5.0</span>
+                <span class="text-gray-400 text-xs font-bold uppercase tracking-wider">· Baseado em avaliações no Google</span>
+                <a href="https://www.google.com/maps/place/Cl%C3%ADnica+Rafaela+Coelho+-+Beleza+e+est%C3%A9tica/@-3.7389104,-38.5568566,1143m" target="_blank" rel="noopener" class="text-accent text-[10px] font-bold uppercase tracking-widest underline underline-offset-4 hover:text-primary transition-colors">Ver no Google</a>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto reveal-up">
+                <!-- Testimonial 1 -->
+                <div class="bg-bg border border-secondary p-8 rounded-[2.5rem] shadow-sm relative text-left transition-all duration-300 hover:shadow-md flex flex-col justify-between">
+                    <div>
+                        <span class="absolute top-6 right-8 text-6xl font-serif text-accent opacity-20 pointer-events-none">“</span>
+                        <div class="flex justify-between items-center mb-5">
+                            <div class="flex gap-1 text-accent">
+                                <i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i>
+                            </div>
+                            <div class="flex items-center gap-1.5 text-[9px] font-bold tracking-wider text-primary/40 bg-surface/50 dark:bg-surface/20 px-2.5 py-0.5 rounded-full border border-secondary">
+                                <i class="fab fa-google text-[10px] text-accent"></i> Google Review
+                            </div>
+                        </div>
+                        <p class="text-gray-500 dark:text-gray-400 font-medium text-xs sm:text-sm leading-relaxed mb-6 italic">"A minha experiência na clínica foi perfeita. A escova modeladora e o cronograma capilar salvaram o meu cabelo. O atendimento é extremamente refinado e acolhedor."</p>
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-primary text-base italic">Mariana S.</h4>
+                        <p class="text-[9px] text-accent uppercase font-black tracking-widest mt-1">Cabelo (RC Experience)</p>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-bg border border-secondary p-8 rounded-[2.5rem] shadow-sm relative text-left transition-all duration-300 hover:shadow-md flex flex-col justify-between">
+                    <div>
+                        <span class="absolute top-6 right-8 text-6xl font-serif text-accent opacity-20 pointer-events-none">“</span>
+                        <div class="flex justify-between items-center mb-5">
+                            <div class="flex gap-1 text-accent">
+                                <i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i>
+                            </div>
+                            <div class="flex items-center gap-1.5 text-[9px] font-bold tracking-wider text-primary/40 bg-surface/50 dark:bg-surface/20 px-2.5 py-0.5 rounded-full border border-secondary">
+                                <i class="fab fa-google text-[10px] text-accent"></i> Google Review
+                            </div>
+                        </div>
+                        <p class="text-gray-500 dark:text-gray-400 font-medium text-xs sm:text-sm leading-relaxed mb-6 italic">"A extensão de cílios da clínica é incrível! Tem uma durabilidade que eu nunca vi em outro lugar e o resultado ficou super harmônico. Me sinto linda todos os dias."</p>
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-primary text-base italic">Beatriz M.</h4>
+                        <p class="text-[9px] text-accent uppercase font-black tracking-widest mt-1">Volume Russo / Cílios</p>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-bg border border-secondary p-8 rounded-[2.5rem] shadow-sm relative text-left transition-all duration-300 hover:shadow-md flex flex-col justify-between">
+                    <div>
+                        <span class="absolute top-6 right-8 text-6xl font-serif text-accent opacity-20 pointer-events-none">“</span>
+                        <div class="flex justify-between items-center mb-5">
+                            <div class="flex gap-1 text-accent">
+                                <i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i>
+                            </div>
+                            <div class="flex items-center gap-1.5 text-[9px] font-bold tracking-wider text-primary/40 bg-surface/50 dark:bg-surface/20 px-2.5 py-0.5 rounded-full border border-secondary">
+                                <i class="fab fa-google text-[10px] text-accent"></i> Google Review
+                            </div>
+                        </div>
+                        <p class="text-gray-500 dark:text-gray-400 font-medium text-xs sm:text-sm leading-relaxed mb-6 italic">"Os procedimentos de estética corporal realmente entregam resultados reais. Além de super relaxante, senti uma diferença imediata nas minhas medidas. Recomendo demais."</p>
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-primary text-base italic">Larissa F.</h4>
+                        <p class="text-[9px] text-accent uppercase font-black tracking-widest mt-1">Drenagem Linfática / Corporal</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão Ver Mais no Google -->
+            <div class="mt-12 reveal-up">
+                <a href="https://www.google.com/maps/place/Cl%C3%ADnica+Rafaela+Coelho+-+Beleza+e+est%C3%A9tica/@-3.7389104,-38.5568566,1143m/data=!3m1!1e3!4m6!3m5!1s0x7c7497183b22e09:0xb73be169af642f3b!8m2!3d-3.7389104!4d-38.5542763!16s%2Fg%2F11fx8jyqy9?hl=en-br&entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" 
+                   target="_blank" 
+                   rel="noopener" 
+                   class="inline-flex items-center gap-2.5 bg-primary text-bg px-8 py-4 rounded-full font-bold hover:bg-opacity-95 transition-all text-xs uppercase tracking-widest shadow-sm">
+                    <i class="fab fa-google text-xs"></i> Acessar Perfil da Clínica no Google
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION (ACORDEÃO GSAP) -->
+    <section class="py-16 md:py-20 px-6 lg:px-12 bg-bg" id="faq">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-16 reveal-up">
+                <span class="text-accent font-bold uppercase tracking-[0.3em] text-[10px] block mb-3">Dúvidas Frequentes</span>
+                <h2 class="font-serif text-3xl sm:text-5xl text-primary leading-tight italic">
+                    Perguntas Respondidas
+                </h2>
+                <p class="text-gray-400 text-[10px] uppercase font-bold tracking-[0.35em] mt-3">Clique na pergunta para ler a resposta</p>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item border border-secondary rounded-3xl bg-surface/10 hover:bg-surface/20 transition-all duration-300 overflow-hidden">
+                    <button class="w-full flex items-center justify-between p-6 md:p-8 text-left focus:outline-none cursor-pointer group" onclick="toggleFaq(this)">
+                        <span class="font-serif text-lg md:text-xl text-primary font-bold italic leading-tight group-hover:text-accent transition-colors">Como funciona o cronograma capilar RC Experience?</span>
+                        <span class="material-symbols-outlined text-accent transition-transform duration-300 pointer-events-none">add</span>
+                    </button>
+                    <div class="faq-answer h-0 opacity-0 overflow-hidden transition-all duration-300">
+                        <div class="px-6 pb-6 md:px-8 md:pb-8 text-sm md:text-base text-gray-500 dark:text-gray-400 leading-relaxed font-medium">
+                            O RC Experience é um tratamento intensivo e totalmente personalizado. Iniciamos com uma avaliação visagista da saúde capilar para identificar as reais necessidades do seu fio. O cronograma intercala etapas de hidratação (devolução de água), nutrição (devolução de óleos essenciais) e reconstrução (reposição de massa/queratina), utilizando os melhores ativos importados do mercado.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="faq-item border border-secondary rounded-3xl bg-surface/10 hover:bg-surface/20 transition-all duration-300 overflow-hidden">
+                    <button class="w-full flex items-center justify-between p-6 md:p-8 text-left focus:outline-none cursor-pointer group" onclick="toggleFaq(this)">
+                        <span class="font-serif text-lg md:text-xl text-primary font-bold italic leading-tight group-hover:text-accent transition-colors">Qual é a durabilidade das extensões de cílios e quando devo fazer manutenção?</span>
+                        <span class="material-symbols-outlined text-accent transition-transform duration-300 pointer-events-none">add</span>
+                    </button>
+                    <div class="faq-answer h-0 opacity-0 overflow-hidden transition-all duration-300">
+                        <div class="px-6 pb-6 md:px-8 md:pb-8 text-sm md:text-base text-gray-500 dark:text-gray-400 leading-relaxed font-medium">
+                            A extensão de cílios acompanha o ciclo natural de crescimento e queda dos seus cílios originais. A durabilidade completa pode chegar a 4 ou 6 semanas, mas para manter o olhar preenchido e impecável, recomendamos realizar a manutenção preventiva a cada 15 ou 21 dias.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item border border-secondary rounded-3xl bg-surface/10 hover:bg-surface/20 transition-all duration-300 overflow-hidden">
+                    <button class="w-full flex items-center justify-between p-6 md:p-8 text-left focus:outline-none cursor-pointer group" onclick="toggleFaq(this)">
+                        <span class="font-serif text-lg md:text-xl text-primary font-bold italic leading-tight group-hover:text-accent transition-colors">A blindagem ou alongamento em fibra de vidro danifica as unhas naturais?</span>
+                        <span class="material-symbols-outlined text-accent transition-transform duration-300 pointer-events-none">add</span>
+                    </button>
+                    <div class="faq-answer h-0 opacity-0 overflow-hidden transition-all duration-300">
+                        <div class="px-6 pb-6 md:px-8 md:pb-8 text-sm md:text-base text-gray-500 dark:text-gray-400 leading-relaxed font-medium">
+                            Não. Quando a aplicação e a remoção são feitas de forma correta por profissionais experientes utilizando materiais esterilizados e géis regulamentados, as unhas naturais permanecem saudáveis. A blindagem atua inclusive como uma barreira protetora física, impedindo que as unhas lasquem ou quebrem no dia a dia.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item border border-secondary rounded-3xl bg-surface/10 hover:bg-surface/20 transition-all duration-300 overflow-hidden">
+                    <button class="w-full flex items-center justify-between p-6 md:p-8 text-left focus:outline-none cursor-pointer group" onclick="toggleFaq(this)">
+                        <span class="font-serif text-lg md:text-xl text-primary font-bold italic leading-tight group-hover:text-accent transition-colors">O que é a "Estética de Resultados" realizada na clínica?</span>
+                        <span class="material-symbols-outlined text-accent transition-transform duration-300 pointer-events-none">add</span>
+                    </button>
+                    <div class="faq-answer h-0 opacity-0 overflow-hidden transition-all duration-300">
+                        <div class="px-6 pb-6 md:px-8 md:pb-8 text-sm md:text-base text-gray-500 dark:text-gray-400 leading-relaxed font-medium">
+                            O Estética de Resultados consiste em corpo ou rosto de alta performance desenvolvidos sob bases científicas e visagistas. O foco não é apenas relaxar, mas sim entregar mudanças reais e visíveis no tônus da pele, redução de medidas e contorno corporal através de manobras de drenagem exclusivas e ativos concentrados.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA pós-FAQ -->
+            <div class="mt-14 reveal-up text-center">
+                <p class="font-serif text-xl sm:text-2xl text-primary italic mb-2">Ainda com dúvidas?</p>
+                <p class="text-gray-400 text-sm font-medium mb-6">Fale diretamente com a equipe RC — respondemos rapidinho.</p>
+                <a href="https://wa.me/message/3WNUECODMQ4DG1" target="_blank"
+                   class="inline-flex items-center gap-2.5 bg-[#25D366] text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-widest shadow-md hover:brightness-110 transition-all">
+                    <i class="fab fa-whatsapp text-lg"></i> Falar no WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCALIZAÇÃO & HORÁRIOS -->
+    <section class="py-16 bg-bg" id="localizacao">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                <div class="lg:col-span-5 reveal-up">
+                    <span class="text-accent font-bold uppercase tracking-[0.3em] text-[10px] block mb-4">Como nos Encontrar</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl text-primary mb-8 italic">Visite o Nosso Studio</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 border-l-2 border-accent pl-5">
+                            <div>
+                                <h4 class="text-xs uppercase font-extrabold tracking-widest text-primary">Endereço</h4>
+                                <p class="text-gray-500 dark:text-gray-400 font-medium text-sm leading-relaxed mt-1">
+                                    Rua Conselheiro Vieira da Silva, 621<br>Parquelândia, Fortaleza - CE, 60450-305
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 border-l-2 border-accent pl-5">
+                            <div>
+                                <h4 class="text-xs uppercase font-extrabold tracking-widest text-primary">Funcionamento</h4>
+                                <p class="text-gray-500 dark:text-gray-400 font-medium text-sm leading-relaxed mt-1">
+                                    Terça a Sábado: 09h às 18h<br>Segunda e Domingo: Fechado
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 border-l-2 border-accent pl-5">
+                            <div>
+                                <h4 class="text-xs uppercase font-extrabold tracking-widest text-primary">Contato</h4>
+                                <p class="text-gray-500 dark:text-gray-400 font-medium text-sm leading-relaxed mt-1">
+                                    +55 (85) 9605-0605
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                        <a href="https://maps.google.com/?q=Rua+Conselheiro+Vieira+da+Silva%2C+621+-+Parquel%C3%A2ndia%2C+Fortaleza+-+CE%2C+60450-305" target="_blank" class="inline-flex items-center justify-center gap-2 bg-primary text-bg px-6 py-4 rounded-xl font-bold hover:bg-opacity-95 transition-all shadow-sm text-xs uppercase tracking-wider">
+                            <span class="material-symbols-outlined text-base">map</span> Ver no Google Maps
+                        </a>
+                        <a href="https://wa.me/message/3WNUECODMQ4DG1" target="_blank" class="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-4 rounded-xl font-bold hover:bg-opacity-90 transition-all shadow-sm text-xs uppercase tracking-wider">
+                            <i class="fab fa-whatsapp text-sm"></i> Chamar no WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 relative h-[380px] sm:h-[450px] rounded-[3rem] overflow-hidden border-4 md:border-8 border-surface shadow-2xl transition-colors duration-800">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.3323049187313!2d-38.56382102555627!3d-3.737637843196942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74900a39c9dfb%3A0xe5a36377759b6743!2sR.%20Conselheiro%20Vieira%20da%20Silva%2C%20621%20-%20Parquel%C3%A2ndia%2C%20Fortaleza%20-%20CE%2C%2060450-305!5e0!3m2!1spt-BR!2sbr!4v1717270000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" title="Localização Clínica Rafaela Coelho — Parquelândia, Fortaleza"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-primaryDark text-bg py-16 px-6 lg:px-12 transition-colors duration-800">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-2">
+                    <div class="mb-6">
+                        <img src="assets/logo_transparent.webp" alt="Clínica Rafaela Coelho" class="h-16 w-auto object-contain select-none" id="footer-logo">
+                    </div>
+                    <p class="text-xs text-gray-400 max-w-sm leading-relaxed mb-6 font-medium">Estética de resultados, cabelo de revista, extensão de cílios marcante e unhas premium. Experimente a fusão ideal de beleza e bem-estar.</p>
+                    <div class="flex gap-4">
+                        <a href="https://instagram.com/clinicarafaelacoelho" target="_blank" class="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center text-gray-400 hover:text-accent hover:border-accent transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/message/3WNUECODMQ4DG1" target="_blank" class="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center text-gray-400 hover:text-accent hover:border-accent transition-colors"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-base font-bold text-accent mb-6 italic">Pilares RC</h4>
+                    <ul class="space-y-3 text-xs text-gray-400 font-medium">
+                        <li><a href="#procedimentos" onclick="showTab('cabelo')" class="hover:text-bg transition-colors">RC Experience Capilar</a></li>
+                        <li><a href="#procedimentos" onclick="showTab('cilios')" class="hover:text-bg transition-colors">Cílios Volume & Visagismo</a></li>
+                        <li><a href="#procedimentos" onclick="showTab('unhas')" class="hover:text-bg transition-colors">Unhas de Fibra e Gel</a></li>
+                        <li><a href="#procedimentos" onclick="showTab('facial')" class="hover:text-bg transition-colors">Estética de Resultados</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-base font-bold text-accent mb-6 italic">Local</h4>
+                    <ul class="space-y-3 text-xs text-gray-400 font-medium">
+                        <li>Parquelândia, Fortaleza - CE</li>
+                        <li>Rua Conselheiro Vieira da Silva, 621</li>
+                        <li>+55 (85) 9605-0605</li>
+                        <li>Ter-Sáb: 09h às 18h</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-800 text-center md:text-left md:flex justify-between items-center text-[10px] text-gray-500 font-bold uppercase tracking-wider">
+                <p>© 2026 Clínica Rafaela Coelho • Todos os direitos reservados.</p>
+                <p class="mt-2 md:mt-0">Desenvolvido por <a href="https://impulsyai.vercel.app/" target="_blank" rel="noopener" class="text-accent hover:text-white transition-colors">Impulsy.ai</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 🌌 PROCEDURES DETAILS OVERLAY -->
+    <div class="product-overlay" id="morphOverlay" onclick="closeMorph(event)">
+        <div class="product-detail" id="morphDetail">
+            <!-- Close Button (A11y Touch Target & Visual Aid) -->
+            <button onclick="closeMorph(event, true)" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/25 backdrop-blur-md text-white border border-white/10 hover:bg-black/40 hover:scale-105 active:scale-95 transition-all flex items-center justify-center cursor-pointer" aria-label="Fechar modal">
+                <span class="material-symbols-outlined text-lg">close</span>
+            </button>
+            <div class="detail-header">
+                <div class="absolute inset-0 bg-gradient-to-br from-primary to-primaryDark"></div>
+                <div class="absolute bottom-5 left-8">
+                    <span id="morphTime" class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md text-white px-4 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/10">
+                        <span class="material-symbols-outlined text-[11px]">schedule</span> 0min
+                    </span>
+                </div>
+            </div>
+            <div class="detail-body">
+                <h2 id="morphName">Procedimento</h2>
+                <div class="flex items-center gap-4 mb-8">
+                    <span id="morphPrice" class="font-serif text-3xl text-accent font-bold italic">R$ 0,00</span>
+                    <span class="text-[9px] uppercase font-black text-gray-400 tracking-widest">Sessão Individual</span>
+                </div>
+                <p id="morphDesc" class="font-medium text-gray-500 dark:text-gray-400">Carregando detalhes do protocolo...</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a id="morphWaLink" href="#" target="_blank" class="w-full sm:flex-1 bg-primary text-bg py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-opacity-90 transition-all group shadow-md text-sm">
+                        Agendar Esse Procedimento <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">calendar_month</span>
+                    </a>
+                    <button onclick="closeMorph(event, true)" class="w-full sm:w-auto px-6 py-4 border border-secondary rounded-xl text-primary font-bold hover:bg-primary/5 transition-all text-sm">Voltar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // --- 📊 Procedures Database (20 Complete Elements) ---
+        const servicesData = {
+            cabelo: [
+                { name: "Escova Modeladora RC", price: "80,00", time: "1h", desc: "Escova clássica finalizada com modelagem premium para volume, definição e brilho dignos de passarela." },
+                { name: "Coloração Personalizada", price: "250,00", time: "2h", desc: "Coloração profissional sob medida com diagnóstico cromático prévio para cobertura perfeita e realce de tom, protegendo a fibra capilar." },
+                { name: "RC Experience - Cronograma Capilar", price: "180,00", time: "1h 30min", desc: "Protocolo completo de hidratação, nutrição e reconstrução com ativos importados e massagem capilar relaxante no lavatório." },
+                { name: "Reconstrução Capilar Olaplex", price: "220,00", time: "1h 15min", desc: "Tratamento reconstrutor intensivo com a tecnologia patenteada Olaplex para recuperar pontes de dissulfeto quebradas por processos químicos." },
+                { name: "Mechas Editorial (Sob Consulta)", price: "A partir de 650,00", time: "4h", desc: "Técnica de iluminação tridimensional personalizada respeitando a integridade do fio e a harmonia cromática do rosto." }
+            ],
+            cilios: [
+                { name: "Fio a Fio Clássico", price: "140,00", time: "2h", desc: "Aplicação individual de cílios sintéticos macios sobre cada fio natural para um efeito rímel alongado, natural e elegante." },
+                { name: "Volume Brasileiro", price: "170,00", time: "2h", desc: "Técnica que utiliza fios em formato Y. Oferece volume delicado, textura marcante e preenchimento sem sobrecarregar os fios naturais." },
+                { name: "Volume Russo Luxo", price: "210,00", time: "2h 30min", desc: "Aplicação de leques artesanais de fios ultrafinos. Proporciona máxima densidade, profundidade ao olhar e acabamento aveludado impecável." },
+                { name: "Lash Lifting + Nutrição", price: "120,00", time: "1h 15min", desc: "Tratamento que curva e alinha os próprios cílios naturais, incluindo tintura e banho de queratina e aminoácidos para nutrição profunda." }
+            ],
+            unhas: [
+                { name: "Alongamento em Fibra de Vidro", price: "220,00", time: "2h 30min", desc: "Unhas alongadas com filamentos de fibra de vidro de altíssima resistência, flexibilidade e aparência extremamente natural." },
+                { name: "Alongamento em Gel Premium", price: "190,00", time: "2h", desc: "Alongamento moldado com gel autonivelante de alta aderência, garantindo formato impecável e brilho vitrificado permanente." },
+                { name: "Blindagem de Unhas Naturais", price: "110,00", time: "1h 15min", desc: "Aplicação de uma camada protetora acrílica/gel para blindar a unha natural contra quebras e descamações, mantendo o esmalte por até 20 dias." },
+                { name: "Manicure & Pedicure SPA", price: "75,00", time: "1h 30min", desc: "Cuidado clássico de cutículas e esmaltação premium com esfoliação com sais de banho, massagem hidratante com óleos essenciais e toalhas quentes." }
+            ],
+            facial: [
+                { name: "Limpeza de Pele Profunda RC", price: "150,00", time: "1h 30min", desc: "Extração minuciosa com peeling ultrassônico, vapor de ozônio, alta frequência, esfoliação enzimática e máscara nutritiva calmante." },
+                { name: "Peeling de Diamante", price: "180,00", time: "1h", desc: "Microesfoliação física superficial para remoção de células mortas, suavização de poros dilatados e estímulo de colágeno." },
+                { name: "Protocolo Glow Facial (Vitamina C)", price: "200,00", time: "1h", desc: "Banho antioxidante e clareador facial com vitamina C pura nanoencapsulada para luminosidade imediata e hidratação profunda." },
+                { name: "Dermaplaning + Hidratação Ouro", price: "160,00", time: "1h 15min", desc: "Remoção de células mortas e penugem facial com lâmina cirúrgica, seguida de aplicação de máscara hidratante com partículas douradas." }
+            ],
+            corporal: [
+                { name: "Drenagem Linfática Método RC", price: "130,00", time: "1h", desc: "Massagem corporal manual suave que estimula o sistema linfático, reduzindo inchaço, melhorando o contorno corporal e eliminando toxinas." },
+                { name: "Massagem Modeladora Redutora", price: "140,00", time: "1h", desc: "Manobras firmes, profundas e vigorosas para ativação da circulação local e melhora do aspecto da celulite e gordura localizada." },
+                { name: "Massagem Relaxante Aromaterapêutica", price: "120,00", time: "1h", desc: "Massagem corporal integrativa com óleos essenciais aquecidos, focada no alívio de tensões musculares, estresse mental e relaxamento profundo." }
+            ]
+        };
+
+        // --- 🌌 View Transition Morphing Logic ---
+        const overlay = document.getElementById('morphOverlay');
+
+        function openMorph(data) {
+            document.getElementById('morphName').innerText = data.name;
+            document.getElementById('morphPrice').innerText = `R$ ${data.price}`;
+            document.getElementById('morphTime').innerHTML = `<span class="material-symbols-outlined text-[10px]">schedule</span> ${data.time}`;
+            document.getElementById('morphDesc').innerText = data.desc;
+            
+            // Hydrate booking message dynamically
+            const message = encodeURIComponent(`Olá Clínica Rafaela Coelho! Gostaria de agendar o procedimento "${data.name}" (${data.time}, R$ ${data.price}) que vi no site.`);
+            document.getElementById('morphWaLink').href = `https://wa.me/558596050605?text=${message}`;
+
+            overlay.classList.add('open');
+            overlay.offsetHeight; // Force reflow
+            overlay.classList.add('visible');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMorph(e, force = false) {
+            if (force || e.target === overlay) {
+                overlay.classList.remove('visible');
+                setTimeout(() => { 
+                    overlay.classList.remove('open'); 
+                    document.body.style.overflow = '';
+                }, 400);
+            }
+        }
+
+        function showTab(category, btn, userClick = true) {
+            const btns = document.querySelectorAll('.tab-btn');
+            const isMobile = window.innerWidth < 1024;
+            
+            if (btn) {
+                btns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                if (userClick && isMobile) {
+                    btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                }
+                const searchInput = document.getElementById('procedure-search');
+                if (searchInput) searchInput.value = '';
+                
+                // Update sliding gold underline
+                updateTabIndicator(btn);
+            }
+            
+            const list = servicesData[category] || [];
+            renderResults(list);
+        }
+
+        function updateTabIndicator(btn) {
+            const indicator = document.getElementById('tab-indicator');
+            if (indicator && btn) {
+                const rect = btn.getBoundingClientRect();
+                const parentRect = btn.parentElement.getBoundingClientRect();
+                const left = rect.left - parentRect.left + btn.parentElement.scrollLeft;
+                const width = rect.width;
+                
+                gsap.to(indicator, {
+                    left: left,
+                    width: width,
+                    duration: 0.35,
+                    ease: "power2.out"
+                });
+            }
+        }
+
+        function scrollToCatalog(category) {
+            const catalogSec = document.getElementById('procedimentos');
+            catalogSec.scrollIntoView({ behavior: 'smooth' });
+            
+            // Find appropriate button
+            const btns = document.querySelectorAll('.tab-btn');
+            btns.forEach(btn => {
+                if (btn.innerText.toLowerCase().includes(category.slice(0, 4))) {
+                    setTimeout(() => {
+                        showTab(category, btn, true);
+                    }, 500);
+                }
+            });
+        }
+
+        function handleSearch(query) {
+            const btns = document.querySelectorAll('.tab-btn');
+            const cleanQuery = query.toLowerCase().trim();
+            
+            if (!cleanQuery) {
+                showTab('cabelo', document.querySelector('.tab-btn'), false);
+                return;
+            }
+
+            btns.forEach(b => b.classList.remove('active'));
+
+            let matches = [];
+            Object.keys(servicesData).forEach(cat => {
+                servicesData[cat].forEach(item => {
+                    if (item.name.toLowerCase().includes(cleanQuery) || item.desc.toLowerCase().includes(cleanQuery)) {
+                        matches.push(item);
+                    }
+                });
+            });
+
+            renderResults(matches, true);
+        }
+
+        function renderResults(list, isSearch = false) {
+            const container = document.getElementById('price-container');
+            const isMobile = window.innerWidth < 1024;
+            
+            gsap.to(container, { opacity: 0, y: 10, duration: 0.2, onComplete: () => {
+                let html = list.map((i, index) => `
+                    <div class="service-row block py-5 cursor-pointer group border-b border-secondary last:border-0 hover:bg-accent/[0.03] transition-colors rounded-xl px-4 -mx-4 ${!isSearch && index > 4 ? 'hidden extra-item' : ''}" 
+                         onclick='openMorph(${JSON.stringify(i).replace(/'/g, "&apos;")})'>
+                        <h4 class="font-black text-primary text-[14px] sm:text-base group-hover:text-accent transition-colors leading-tight mb-2 tracking-wide italic uppercase">${i.name}</h4>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[9px] uppercase font-bold tracking-widest opacity-40">${i.time}</span>
+                                <span class="w-1 h-1 rounded-full bg-accent/20"></span>
+                                <span class="text-[9px] uppercase font-black tracking-widest text-accent hover:opacity-85 transition-opacity">Ver Detalhes</span>
+                            </div>
+                            <span class="price-tag font-serif text-[13px] tracking-wide text-accent font-black italic">R$ ${i.price}</span>
+                        </div>
+                    </div>
+                `).join('');
+
+                if (!isSearch && list.length > 5) {
+                    html += `
+                        <div id="show-more-wrapper" class="col-span-full flex justify-center mt-8">
+                            <button onclick="expandList()" class="flex items-center gap-2 text-accent text-[9px] font-black uppercase tracking-[0.25em] hover:opacity-75 transition-all group">
+                                Ver Todos
+                                <span class="material-symbols-outlined transition-transform group-hover:translate-y-1">expand_more</span>
+                            </button>
+                        </div>
+                    `;
+                }
+
+                container.innerHTML = html || `<p class="py-10 text-gray-400 text-center col-span-2 uppercase text-[10px] tracking-widest">${isSearch ? 'Nenhum procedimento encontrado.' : 'Procedimentos em atualização...'}</p>`;
+                
+                gsap.fromTo(".service-row:not(.hidden)", 
+                    { opacity: 0, x: isMobile ? -8 : 0, y: isMobile ? 0 : 8 }, 
+                    { opacity: 1, x: 0, y: 0, duration: 0.45, stagger: 0.04, ease: "power2.out" }
+                );
+                gsap.to(container, { opacity: 1, y: 0, duration: 0.35 });
+            }});
+        }
+
+        function expandList() {
+            const extras = document.querySelectorAll('.extra-item');
+            const wrapper = document.getElementById('show-more-wrapper');
+            
+            extras.forEach(el => {
+                el.classList.remove('hidden');
+                gsap.fromTo(el, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4 });
+            });
+            
+            if (wrapper) wrapper.style.display = 'none';
+        }
+
+        // --- 📱 Mobile Menu ---
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('translate-x-full');
+        }
+
+        // --- 🖼️ Slider Wipe Logic ---
+        function updateWipe(e, container) {
+            const rect = container.getBoundingClientRect();
+            const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+            if (!clientX) return;
+            const x = clientX - rect.left;
+            const pct = Math.max(0, Math.min(100, (x / rect.width) * 100));
+            
+            const before = container.querySelector('.compare-before');
+            const divider = container.querySelector('.compare-divider');
+            const handle = container.querySelector('.compare-handle');
+            
+            before.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+            divider.style.left = `${pct}%`;
+            handle.style.left = `${pct}%`;
+        }
+
+        // --- 🏆 3D Coverflow Slider Logic ---
+        let activeIdx = 0;
+        
+        function rotateCarousel(dir) {
+            const items = document.querySelectorAll('.carousel-item');
+            activeIdx = (activeIdx + dir + items.length) % items.length;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            const items = document.querySelectorAll('.carousel-item');
+            const isMobile = window.innerWidth < 768;
+            
+            items.forEach((item, index) => {
+                let offset = index - activeIdx;
+                
+                // Handle wrap-around math
+                if (offset < -Math.floor(items.length / 2)) {
+                    offset += items.length;
+                } else if (offset > Math.floor(items.length / 2)) {
+                    offset -= items.length;
+                }
+                
+                const absOffset = Math.abs(offset);
+                
+                // Translate, scale, rotate calculations
+                let transX = offset * (isMobile ? 100 : 260);
+                let z = -absOffset * (isMobile ? 120 : 180); // Push side cards back in Z to resolve overlapping clipping
+                let scale = 1 - (absOffset * (isMobile ? 0.12 : 0.15));
+                let rotY = offset * (isMobile ? -15 : -25);
+                let zIndex = 100 - absOffset;
+                let opacity = absOffset > 1 ? 0.35 : 1;
+                
+                gsap.to(item, {
+                    x: transX,
+                    z: z, // Push back side cards to avoid clipping/glitching
+                    scale: scale,
+                    rotationY: rotY,
+                    zIndex: zIndex,
+                    opacity: opacity,
+                    duration: 0.8,
+                    ease: "power3.out"
+                });
+            });
+        }
+
+        // --- 🖐️ Swipe / Drag Gestures for Carousel ---
+        const trackContainer = document.getElementById('carousel-track');
+        if (trackContainer) {
+            let startX = 0;
+            let currentX = 0;
+            let isDragging = false;
+            
+            trackContainer.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                isDragging = true;
+            }, { passive: true });
+            
+            trackContainer.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                currentX = e.touches[0].clientX;
+            }, { passive: true });
+            
+            trackContainer.addEventListener('touchend', (e) => {
+                if (!isDragging) return;
+                isDragging = false;
+                const diffX = startX - currentX;
+                // Threshold of 40px to register swipe
+                if (Math.abs(diffX) > 40) {
+                    if (diffX > 0) {
+                        rotateCarousel(1); // Swipe left -> next slide
+                    } else {
+                        rotateCarousel(-1); // Swipe right -> prev slide
+                    }
+                }
+                startX = 0;
+                currentX = 0;
+            });
+        }
+
+        // --- 🌙 Dark Mode ---
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+
+        // --- 🌟 Scroll Reveal Logic (Intersection Observer) ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.08 });
+
+        // --- 📊 Active Scroll Tracker & Floating Widget ---
+        const initScrollTracker = () => {
+            const progressWrap = document.createElement('a');
+            progressWrap.className = 'scroll-progress-wrap';
+            progressWrap.href = 'https://wa.me/message/3WNUECODMQ4DG1';
+            progressWrap.target = '_blank';
+            progressWrap.innerHTML = `
+                <svg width="100%" height="100%" viewBox="-1 -1 102 102">
+                    <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+                </svg>
+                <i class="fab fa-whatsapp text-green-500 text-2xl absolute"></i>
+            `;
+            document.body.appendChild(progressWrap);
+
+            const progressPath = progressWrap.querySelector('path');
+            const pathLength = progressPath.getTotalLength();
+            
+            const updateProgress = () => {
+                const scroll = window.pageYOffset || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - window.innerHeight;
+                const progress = pathLength - (scroll * pathLength / height);
+                progressPath.style.strokeDashoffset = progress;
+                
+                // Show floating button only when scrolled past Hero (75% of viewport height)
+                if (scroll > window.innerHeight * 0.75) {
+                    progressWrap.classList.add('active');
+                } else {
+                    progressWrap.classList.remove('active');
+                }
+            };
+
+            window.addEventListener('scroll', updateProgress);
+            updateProgress();
+        };
+
+        // --- 🍱 Hover zoom items ---
+        document.querySelectorAll('.image-zoom').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                const img = el.querySelector('img');
+                if (img) gsap.to(img, { scale: 1.06, duration: 1.2, ease: "power2.out" });
+            });
+            el.addEventListener('mouseleave', () => {
+                const img = el.querySelector('img');
+                if (img) gsap.to(img, { scale: 1, duration: 1.2, ease: "power2.out" });
+            });
+        });
+
+        // --- 📏 Navbar shrink ---
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 40) {
+                nav.classList.add('nav-slim');
+            } else {
+                nav.classList.remove('nav-slim');
+            }
+        });
+
+        // --- 🚀 Window Load ---
+        window.onload = () => {
+            // Restore theme
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+            
+            // Set active category and initial indicator state
+            const initialBtn = document.querySelector('.tab-btn');
+            showTab('cabelo', initialBtn, false);
+            setTimeout(() => {
+                if (initialBtn) updateTabIndicator(initialBtn);
+            }, 150);
+            
+            // Start components
+            initScrollTracker();
+            updateCarousel();
+            
+            // 🫧 Hero Particles/Bubbles Generation
+            const particlesContainer = document.getElementById('heroParticles');
+            if (particlesContainer) {
+                for (let i = 0; i < 25; i++) {
+                    const particle = document.createElement('div');
+                    particle.classList.add('particle');
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.animationDelay = Math.random() * 8 + 's';
+                    particle.style.animationDuration = (6 + Math.random() * 6) + 's';
+                    const size = (2 + Math.random() * 3) + 'px';
+                    particle.style.width = size;
+                    particle.style.height = size;
+                    particlesContainer.appendChild(particle);
+                }
+            }
+            
+            document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+
+            if (window.gsap && window.ScrollTrigger) {
+                gsap.registerPlugin(ScrollTrigger);
+                
+                // Hero Background Parallax Effect
+                gsap.to("#hero-bg-img", {
+                    yPercent: 15,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: "#hero",
+                        start: "top top",
+                        end: "bottom top",
+                        scrub: true
+                    }
+                });
+                
+                // GSAP Animations
+                gsap.to('.reveal-up', { 
+                    opacity: 1, 
+                    y: 0, 
+                    duration: 0.8, 
+                    stagger: 0.08, 
+                    scrollTrigger: { 
+                        trigger: '.reveal-up', 
+                        start: "top 95%" 
+                    }
+                });
+
+                // Blob parallax
+                gsap.to(".parallax-blob", {
+                    y: (i, el) => parseFloat(el.getAttribute('data-speed')) * window.innerHeight,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: "body",
+                        start: "top top",
+                        end: "bottom bottom",
+                        scrub: 0.8
+                    }
+                });
+
+                // Auto-Wave slider discovery
+                gsap.fromTo(".compare-handle", 
+                    { left: "50%" },
+                    { 
+                        left: "38%", duration: 1.2, repeat: 1, yoyo: true, ease: "power2.inOut",
+                        scrollTrigger: {
+                            trigger: ".compare-container",
+                            start: "top 75%",
+                            toggleActions: "play none none none"
+                        },
+                        onUpdate: function() {
+                            // Sync wipe clip-path during auto-wave
+                            const pct = parseFloat(this.targets()[0].style.left);
+                            document.querySelectorAll('.compare-container').forEach(c => {
+                                const before = c.querySelector('.compare-before');
+                                const divider = c.querySelector('.compare-divider');
+                                before.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+                                divider.style.left = `${pct}%`;
+                            });
+                        }
+                    }
+                );
+            }
+        };
+
+        // Update tab indicator on window resize
+        window.addEventListener('resize', () => {
+            const activeBtn = document.querySelector('.tab-btn.active');
+            if (activeBtn) updateTabIndicator(activeBtn);
+        });
+
+        // --- 💬 FAQ Interactive Accordion ---
+        function toggleFaq(button) {
+            const faqItem = button.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            const icon = button.querySelector('span.material-symbols-outlined');
+            const isOpen = faqItem.classList.contains('faq-open');
+            
+            // Close other items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem && item.classList.contains('faq-open')) {
+                    item.classList.remove('faq-open');
+                    const otherAnswer = item.querySelector('.faq-answer');
+                    const otherIcon = item.querySelector('span.material-symbols-outlined');
+                    gsap.to(otherAnswer, { height: 0, opacity: 0, duration: 0.35, ease: "power2.out" });
+                    if (otherIcon) {
+                        otherIcon.style.transform = 'rotate(0deg)';
+                        otherIcon.innerText = 'add';
+                    }
+                }
+            });
+            
+            if (isOpen) {
+                faqItem.classList.remove('faq-open');
+                gsap.to(answer, { height: 0, opacity: 0, duration: 0.35, ease: "power2.out" });
+                if (icon) {
+                    icon.style.transform = 'rotate(0deg)';
+                    icon.innerText = 'add';
+                }
+            } else {
+                faqItem.classList.add('faq-open');
+                answer.style.height = 'auto';
+                const height = answer.offsetHeight;
+                answer.style.height = '0px';
+                answer.style.opacity = '0';
+                
+                gsap.to(answer, { height: height, opacity: 1, duration: 0.45, ease: "power3.out" });
+                if (icon) {
+                    icon.style.transform = 'rotate(45deg)';
+                    icon.innerText = 'close';
+                }
+            }
+        }
+
+        // --- 🖼️ Toggle Additional Cases Grid ---
+        function toggleCases(button) {
+            const casesGrid = document.getElementById('expanded-cases');
+            const isHidden = casesGrid.classList.contains('hidden');
+            
+            if (isHidden) {
+                casesGrid.classList.remove('hidden');
+                casesGrid.style.display = 'grid'; // Force display as grid
+                gsap.fromTo(casesGrid, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" });
+                button.innerHTML = `Ver Menos Casos <span class="material-symbols-outlined text-base">expand_less</span>`;
+            } else {
+                gsap.to(casesGrid, { opacity: 0, y: 30, duration: 0.4, ease: "power2.in", onComplete: () => {
+                    casesGrid.classList.add('hidden');
+                    casesGrid.style.display = 'none';
+                }});
+                button.innerHTML = `Ver Mais Casos <span class="material-symbols-outlined text-base">expand_more</span>`;
+            }
+        }
+
+        // Close details modal on Escape
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeMorph(null, true);
+        });
+    </script>
+</body>
+</html>
