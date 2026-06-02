@@ -1610,8 +1610,9 @@
             updateProgress();
         };
 
-        // --- 🍱 Hover zoom items ---
+        // --- 🍱 Hover zoom items & Lightbox Trigger ---
         document.querySelectorAll('.image-zoom').forEach(el => {
+            el.classList.add('cursor-pointer');
             el.addEventListener('mouseenter', () => {
                 const img = el.querySelector('img');
                 if (img) gsap.to(img, { scale: 1.06, duration: 1.2, ease: "power2.out" });
@@ -1620,7 +1621,55 @@
                 const img = el.querySelector('img');
                 if (img) gsap.to(img, { scale: 1, duration: 1.2, ease: "power2.out" });
             });
+            el.addEventListener('click', () => {
+                const img = el.querySelector('img');
+                if (img) openLightbox(img);
+            });
         });
+
+        // --- 🖼️ Lightbox for Gallery ---
+        function openLightbox(imgElement) {
+            const lightbox = document.getElementById('gallery-lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const modalWrapper = lightbox.querySelector('.reveal-scale');
+            
+            lightboxImg.src = imgElement.src;
+            lightboxImg.alt = imgElement.alt;
+            lightboxCaption.textContent = imgElement.alt;
+            
+            // Show lightbox
+            lightbox.classList.remove('pointer-events-none');
+            lightbox.classList.remove('opacity-0');
+            lightbox.classList.add('opacity-100');
+            
+            // GSAP zoom/reveal
+            gsap.fromTo(modalWrapper, 
+                { scale: 0.95, opacity: 0 },
+                { scale: 1, opacity: 1, duration: 0.4, ease: "power3.out" }
+            );
+            
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('gallery-lightbox');
+            const modalWrapper = lightbox.querySelector('.reveal-scale');
+            
+            gsap.to(modalWrapper, {
+                scale: 0.95,
+                opacity: 0,
+                duration: 0.3,
+                ease: "power2.in",
+                onComplete: () => {
+                    lightbox.classList.add('pointer-events-none');
+                    lightbox.classList.remove('opacity-100');
+                    lightbox.classList.add('opacity-0');
+                    document.body.style.overflow = '';
+                }
+            });
+        }
 
         // --- 📏 Navbar shrink ---
         window.addEventListener('scroll', () => {
@@ -1801,10 +1850,30 @@
             }
         }
 
-        // Close details modal on Escape
+        // Close details modal and lightbox on Escape
         window.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeMorph(null, true);
+            if (e.key === 'Escape') {
+                closeMorph(null, true);
+                closeLightbox();
+            }
         });
     </script>
+
+    <!-- LIGHTBOX MODAL FOR GALLERY IMAGES -->
+    <div id="gallery-lightbox" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300">
+        <!-- Close overlay trigger -->
+        <div class="absolute inset-0 cursor-pointer" onclick="closeLightbox()"></div>
+        <!-- Modal wrapper -->
+        <div class="relative max-w-[90vw] max-h-[85vh] md:max-w-[80vw] md:max-h-[80vh] flex flex-col items-center justify-center reveal-scale scale-95 opacity-0 transition-all duration-300">
+            <!-- Close button -->
+            <button onclick="closeLightbox()" aria-label="Fechar visualização" class="absolute -top-12 right-0 md:-top-4 md:-right-12 text-white bg-white/10 hover:bg-white/20 p-3 rounded-full backdrop-blur-sm border border-white/10 hover:scale-110 rotate-0 hover:rotate-90 transition-all duration-300 cursor-pointer flex items-center justify-center">
+                <span class="material-symbols-outlined text-xl">close</span>
+            </button>
+            <!-- Image container -->
+            <img id="lightbox-img" src="" alt="" class="w-full h-full max-h-[80vh] md:max-h-[75vh] object-contain rounded-2xl md:rounded-[2rem] border border-white/5 shadow-2xl">
+            <!-- Caption -->
+            <p id="lightbox-caption" class="text-white/60 text-xs md:text-sm font-medium mt-4 text-center max-w-md px-4"></p>
+        </div>
+    </div>
 </body>
 </html>
