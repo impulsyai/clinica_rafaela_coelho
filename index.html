@@ -1631,12 +1631,10 @@
         function openLightbox(imgElement) {
             const lightbox = document.getElementById('gallery-lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
-            const lightboxCaption = document.getElementById('lightbox-caption');
             const modalWrapper = lightbox.querySelector('.reveal-scale');
             
             lightboxImg.src = imgElement.src;
             lightboxImg.alt = imgElement.alt;
-            lightboxCaption.textContent = imgElement.alt;
             
             // Show lightbox
             lightbox.classList.remove('pointer-events-none');
@@ -1871,8 +1869,6 @@
             </button>
             <!-- Image container -->
             <img id="lightbox-img" src="" alt="" class="w-full h-full max-h-[80vh] md:max-h-[75vh] object-contain rounded-2xl md:rounded-[2rem] border border-white/5 shadow-2xl">
-            <!-- Caption -->
-            <p id="lightbox-caption" class="text-white/60 text-xs md:text-sm font-medium mt-4 text-center max-w-md px-4"></p>
         </div>
     </div>
 </body>
